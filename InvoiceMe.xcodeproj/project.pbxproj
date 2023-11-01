@@ -13,6 +13,8 @@
 		13CD5A102AF0BB6500F446CD /* InvoiceMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD5A0F2AF0BB6500F446CD /* InvoiceMeTests.swift */; };
 		13CD5A1A2AF0BB6500F446CD /* InvoiceMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD5A192AF0BB6500F446CD /* InvoiceMeUITests.swift */; };
 		13CD5A1C2AF0BB6500F446CD /* InvoiceMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD5A1B2AF0BB6500F446CD /* InvoiceMeUITestsLaunchTests.swift */; };
+		13CD5A2C2AF0BBC100F446CD /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD5A2B2AF0BBC100F446CD /* Invoice.swift */; };
+		13CD5A2E2AF0BEB600F446CD /* Invoice+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD5A2D2AF0BEB600F446CD /* Invoice+Mocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		13CD5A152AF0BB6500F446CD /* InvoiceMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvoiceMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CD5A192AF0BB6500F446CD /* InvoiceMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceMeUITests.swift; sourceTree = "<group>"; };
 		13CD5A1B2AF0BB6500F446CD /* InvoiceMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13CD5A2B2AF0BBC100F446CD /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
+		13CD5A2D2AF0BEB600F446CD /* Invoice+Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Invoice+Mocks.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		13CD59FD2AF0BB6400F446CD /* InvoiceMe */ = {
 			isa = PBXGroup;
 			children = (
+				13CD5A2A2AF0BBB800F446CD /* Models */,
 				13CD59FE2AF0BB6400F446CD /* InvoiceMeApp.swift */,
 				13CD5A022AF0BB6500F446CD /* Assets.xcassets */,
 				13CD5A042AF0BB6500F446CD /* Preview Content */,
@@ -122,6 +127,15 @@
 				13CD5A1B2AF0BB6500F446CD /* InvoiceMeUITestsLaunchTests.swift */,
 			);
 			path = InvoiceMeUITests;
+			sourceTree = "<group>";
+		};
+		13CD5A2A2AF0BBB800F446CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				13CD5A2B2AF0BBC100F446CD /* Invoice.swift */,
+				13CD5A2D2AF0BEB600F446CD /* Invoice+Mocks.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13CD5A2C2AF0BBC100F446CD /* Invoice.swift in Sources */,
+				13CD5A2E2AF0BEB600F446CD /* Invoice+Mocks.swift in Sources */,
 				13CD59FF2AF0BB6400F446CD /* InvoiceMeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
