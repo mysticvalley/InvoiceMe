@@ -55,9 +55,13 @@ extension Invoice {
         .init(number: UUID().uuidString, date: Date())
     }
     
-    /// order the lineItems by Id
-    func orderLineItems() {
-        fatalError("not implemented")
+    /// order the lineItems by Id - ascending and descending
+    mutating func orderLineItems(ascending: Bool) {
+        let sortedlineItems = lineItems.sorted {
+            ascending ? $0.lineId < $1.lineId : $0.lineId > $1.lineId
+        }
+        lineItems.forEach { removeLine(lineId:  $0.lineId) }
+        sortedlineItems.forEach { addLine(line: $0) }
     }
     
     /// returns the number of the line items specified in the variable `max`

@@ -71,5 +71,17 @@ final class InvoicesViewModel: ObservableObject {
         lineItemCounter += 1
         
         invoices.append(invoice)
-    }        
+    }
+    
+    func sortLineItems(ascending: Bool) {
+        var newInvoices = [Invoice]()
+        
+        invoices.forEach { inv in
+            var invoice = inv
+            invoice.orderLineItems(ascending: ascending)
+            newInvoices.append(invoice)
+        }
+        
+        invoices = newInvoices
+    }
 }

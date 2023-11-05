@@ -10,6 +10,7 @@ import SwiftUI
 struct InvoicesView: View {
     @ObservedObject var viewModel: InvoicesViewModel
     @Environment(\.editMode) var editMode
+    @State private var ascending = false
     
     var body: some View {
         NavigationStack {
@@ -23,6 +24,17 @@ struct InvoicesView: View {
                     ToolbarItem(placement: .principal) {
                         HStack {
                             Spacer()
+                            
+                            Button {
+                                viewModel.sortLineItems(ascending: ascending)
+                                ascending.toggle()
+                            } label: {
+                                Image(systemName: "arrow.up.arrow.down")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 24, height: 24)
+                            }
+                            
                             Button {
                                 viewModel.createInvoiceMultipleItemsInvoice()
                             } label: {
@@ -41,7 +53,6 @@ struct InvoicesView: View {
                             }
                         }
                     }
-                    
                 }
         }
     }
