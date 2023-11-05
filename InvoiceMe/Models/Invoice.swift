@@ -8,12 +8,12 @@
 import Foundation
 
 public struct Invoice: Identifiable {
-    public var id: Int { number }
-    let number: Int
+    public var id: String { number }
+    let number: String
     let date: Date
     var lineItems: [InvoiceLine]
     
-    public init(number: Int, date: Date, lineItems: [InvoiceLine] = []) {
+    public init(number: String = UUID().uuidString, date: Date = Date(), lineItems: [InvoiceLine] = []) {
         self.number = number
         self.date = date
         self.lineItems = lineItems
@@ -47,12 +47,12 @@ public struct Invoice: Identifiable {
 extension Invoice {
     /// MergeInvoices appends the items from the sourceInvoice to the current invoice
     func mergeInvoice(sourceInvoice: Invoice) -> Invoice {
-        .init(number: 30, date: Date())
+        .init()
     }
     
     /// Creates a deep clone of the current invoice (all fields and properties)
     func cloneInvoice() -> Invoice {
-        .init(number: 20, date: Date())
+        .init(number: UUID().uuidString, date: Date())
     }
     
     /// order the lineItems by Id

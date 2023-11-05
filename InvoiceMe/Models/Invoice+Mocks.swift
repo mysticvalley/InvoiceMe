@@ -10,7 +10,7 @@ import Foundation
 public extension Invoice {
     static var mockSingleItem: Invoice {
         .init(
-            number: 1,
+            number: "some-uuid-1",
             date: .mock,
             lineItems: [
                 .mockOne
@@ -20,7 +20,7 @@ public extension Invoice {
     
     static var mockMultipleItem: Invoice {
         .init(
-            number: 2,
+            number: "some-uuid-2",
             date: .mock,
             lineItems: [
                 .mockOne, .mockTwo, .mockThree

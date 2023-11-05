@@ -9,7 +9,6 @@ import Foundation
 
 final class InvoicesViewModel: ObservableObject {
     @Published var invoices: [Invoice] = []
-    private var invoiceCounter = 1
     private var lineItemCounter = 1
     
     init(invoices: [Invoice] = []) {
@@ -28,7 +27,7 @@ final class InvoicesViewModel: ObservableObject {
     }
     
     func createInvoiceSingleItemInvoice() {
-        var invoice = Invoice(number: invoiceCounter, date: Date())
+        var invoice = Invoice()
         invoice.addLine(line: InvoiceLine(
             lineId: lineItemCounter,
             description: "Pizza \(lineItemCounter)",
@@ -39,11 +38,10 @@ final class InvoicesViewModel: ObservableObject {
         lineItemCounter += 1
         
         invoices.append(invoice)
-        invoiceCounter += 1
     }
     
     func createInvoiceMultipleItemsInvoice() {
-        var invoice = Invoice(number: invoiceCounter, date: Date())
+        var invoice = Invoice()
         
         invoice.addLine(line: InvoiceLine(
             lineId: lineItemCounter,
@@ -73,6 +71,5 @@ final class InvoicesViewModel: ObservableObject {
         lineItemCounter += 1
         
         invoices.append(invoice)
-        invoiceCounter += 1
     }        
 }
