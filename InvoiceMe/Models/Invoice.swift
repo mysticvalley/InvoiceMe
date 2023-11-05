@@ -7,7 +7,8 @@
 
 import Foundation
 
-public struct Invoice {
+public struct Invoice: Identifiable {
+    public var id: Int { number }
     let number: Int
     let date: Date
     var lineItems: [InvoiceLine]

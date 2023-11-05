@@ -16,6 +16,16 @@ final class InvoicesViewModel: ObservableObject {
         self.invoices = invoices
     }
     
+    func deleteLineItems(at offsets: IndexSet, section: Int) {
+        var invoice = invoices[section]
+        
+        offsets.forEach { index in
+            invoice.lineItems.remove(at:  index)
+        }
+        
+        invoices.remove(at: section)
+        invoices.insert(invoice, at: section)
+    }
     
     func createInvoiceSingleItemInvoice() {
         var invoice = Invoice(number: invoiceCounter, date: Date())
