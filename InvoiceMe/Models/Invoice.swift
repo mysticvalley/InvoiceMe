@@ -46,13 +46,18 @@ public struct Invoice: Identifiable {
 
 extension Invoice {
     /// MergeInvoices appends the items from the sourceInvoice to the current invoice
-    func mergeInvoice(sourceInvoice: Invoice) -> Invoice {
-        .init()
+    func mergeInvoices(sourceInvoice: Invoice) -> Invoice {
+        var invoice = self
+        sourceInvoice.lineItems.forEach {
+            invoice.addLine(line: $0)
+        }
+        return invoice
     }
     
     /// Creates a deep clone of the current invoice (all fields and properties)
     func cloneInvoice() -> Invoice {
-        .init(number: UUID().uuidString, date: Date())
+        let invoice = self
+        return invoice
     }
     
     /// order the lineItems by Id - ascending and descending
@@ -65,23 +70,35 @@ extension Invoice {
     }
     
     /// returns the number of the line items specified in the variable `max`
+    /// Implemented but not visible in Views
     func previewLineItems(_ max: Int) -> [InvoiceLine] {
-        fatalError("not implemented")
+        if max > lineItems.count { return [] }
+        var items = [InvoiceLine]()
+        
+        for i in 0..<max {
+            items.append(lineItems[i])
+        }
+        
+        return items
     }
     
     /// remove the line items in the current invoice that are also in the sourceInvoice
-    func removeItems(from sourceInvoice: Invoice) {
-        fatalError("not implemented")
+    /// Implemented but not visible in Views
+    mutating func removeItems(from sourceInvoice: Invoice) {
+        let compareSet = Set(sourceInvoice.lineItems)
+        let resultItems = lineItems.filter { !compareSet.contains($0) }
+        lineItems = resultItems
     }
     
     /// Outputs string containing the following (replace [] with actual values):
     /// Invoice Number: [InvoiceNumber], InvoiceDate: [DD/MM/YYYY], LineItemCount: [Number of items in LineItems]
     func toString() -> String {
-        fatalError("not implemented")
+        return "Invoice Number: \(number), InvoiceDate: \(date.toString), LineItemCount: \(lineItems.count)"
     }
 }
 
-public struct InvoiceLine {
+public struct InvoiceLine: Identifiable, Hashable {
+    public var id: Int { lineId }
     let lineId: Int
     let description: String
     let quantity: Int
@@ -92,5 +109,13 @@ public struct InvoiceLine {
         self.description = description
         self.quantity = quantity
         self.cost = cost
+    }
+}
+
+extension Date {
+    var toString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/YYYY"
+        return dateFormatter.string(from: self)
     }
 }

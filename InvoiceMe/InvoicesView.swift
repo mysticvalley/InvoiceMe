@@ -14,7 +14,28 @@ struct InvoicesView: View {
     
     var body: some View {
         NavigationStack {
-            content
+            VStack(spacing: 20.0) {
+                ScrollView([.horizontal], showsIndicators: false) {
+                    HStack {
+                        Button("Merge Invoices") {
+                            viewModel.mergeInvoices()
+                        }
+                        .buttonStyle(.primaryButtonStyle)
+                        
+                        Button("Clone Invoice") {
+                            viewModel.cloneInvoice()
+                        }
+                        .buttonStyle(.primaryButtonStyle)
+                        
+                        Button("Preview line Items") {
+                            viewModel.previewLineItems()
+                        }
+                        .buttonStyle(.primaryButtonStyle)
+                    }
+                }
+            
+                content
+            }
                 .navigationTitle("InvoiceMe")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
@@ -61,6 +82,7 @@ struct InvoicesView: View {
     var content: some View {
         if viewModel.invoices.isEmpty {
             Text("Create invoice from top right button!")
+            Spacer()
         } else {
             List {
                 ForEach(Array(zip(viewModel.invoices.indices, viewModel.invoices)), id: \.0) { index, inv in
@@ -91,9 +113,7 @@ struct InvoiceHeaderView: View {
     
     var body: some View {
         HStack {
-            Text("Invoice \(invoice.number)")
-            Spacer()
-            Text("Date: \(invoice.date.description)")
+            Text(invoice.toString())
         }
     }
 }
