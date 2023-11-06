@@ -39,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		131A931C2AF8F86900F49A11 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		131A931E2AF9043F00F49A11 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		131A93202AF9048800F49A11 /* ADR-000-architecuture-decision-records.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ADR-000-architecuture-decision-records.md"; sourceTree = "<group>"; };
+		131A93212AF9049500F49A11 /* ADR-001-MVVM.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ADR-001-MVVM.md"; sourceTree = "<group>"; };
 		13CD59FB2AF0BB6400F446CD /* InvoiceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvoiceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CD59FE2AF0BB6400F446CD /* InvoiceMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceMeApp.swift; sourceTree = "<group>"; };
 		13CD5A002AF0BB6400F446CD /* InvoicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicesView.swift; sourceTree = "<group>"; };
@@ -87,9 +90,20 @@
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
+		131A931F2AF9046A00F49A11 /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				131A93202AF9048800F49A11 /* ADR-000-architecuture-decision-records.md */,
+				131A93212AF9049500F49A11 /* ADR-001-MVVM.md */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
 		13CD59F22AF0BB6400F446CD = {
 			isa = PBXGroup;
 			children = (
+				131A931F2AF9046A00F49A11 /* Architecture */,
+				131A931E2AF9043F00F49A11 /* README.md */,
 				13CD59FD2AF0BB6400F446CD /* InvoiceMe */,
 				13CD5A0E2AF0BB6500F446CD /* InvoiceMeTests */,
 				13CD5A182AF0BB6500F446CD /* InvoiceMeUITests */,
