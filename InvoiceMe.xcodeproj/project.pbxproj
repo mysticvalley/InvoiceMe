@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131A931D2AF8F86900F49A11 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131A931C2AF8F86900F49A11 /* ButtonStyle.swift */; };
 		13CD59FF2AF0BB6400F446CD /* InvoiceMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD59FE2AF0BB6400F446CD /* InvoiceMeApp.swift */; };
 		13CD5A012AF0BB6400F446CD /* InvoicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD5A002AF0BB6400F446CD /* InvoicesView.swift */; };
 		13CD5A032AF0BB6500F446CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CD5A022AF0BB6500F446CD /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		131A931C2AF8F86900F49A11 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		13CD59FB2AF0BB6400F446CD /* InvoiceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvoiceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CD59FE2AF0BB6400F446CD /* InvoiceMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceMeApp.swift; sourceTree = "<group>"; };
 		13CD5A002AF0BB6400F446CD /* InvoicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicesView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		131A931B2AF8F85700F49A11 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				131A931C2AF8F86900F49A11 /* ButtonStyle.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 		13CD59F22AF0BB6400F446CD = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +110,7 @@
 		13CD59FD2AF0BB6400F446CD /* InvoiceMe */ = {
 			isa = PBXGroup;
 			children = (
+				131A931B2AF8F85700F49A11 /* UIComponents */,
 				13CD5A2A2AF0BBB800F446CD /* Models */,
 				13CD59FE2AF0BB6400F446CD /* InvoiceMeApp.swift */,
 				13CD5A002AF0BB6400F446CD /* InvoicesView.swift */,
@@ -277,6 +288,7 @@
 				13CD5A292AF0BBAB00F446CD /* InvoicesViewModel.swift in Sources */,
 				13CD5A2C2AF0BBC100F446CD /* Invoice.swift in Sources */,
 				13CD5A2E2AF0BEB600F446CD /* Invoice+Mocks.swift in Sources */,
+				131A931D2AF8F86900F49A11 /* ButtonStyle.swift in Sources */,
 				13CD5A012AF0BB6400F446CD /* InvoicesView.swift in Sources */,
 				13CD59FF2AF0BB6400F446CD /* InvoiceMeApp.swift in Sources */,
 			);
