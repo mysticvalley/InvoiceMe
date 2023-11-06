@@ -12,7 +12,7 @@
 		13CD5A012AF0BB6400F446CD /* InvoicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD5A002AF0BB6400F446CD /* InvoicesView.swift */; };
 		13CD5A032AF0BB6500F446CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CD5A022AF0BB6500F446CD /* Assets.xcassets */; };
 		13CD5A062AF0BB6500F446CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CD5A052AF0BB6500F446CD /* Preview Assets.xcassets */; };
-		13CD5A102AF0BB6500F446CD /* InvoiceMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD5A0F2AF0BB6500F446CD /* InvoiceMeTests.swift */; };
+		13CD5A102AF0BB6500F446CD /* InvoicesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD5A0F2AF0BB6500F446CD /* InvoicesViewModelTests.swift */; };
 		13CD5A1A2AF0BB6500F446CD /* InvoiceMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD5A192AF0BB6500F446CD /* InvoiceMeUITests.swift */; };
 		13CD5A1C2AF0BB6500F446CD /* InvoiceMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD5A1B2AF0BB6500F446CD /* InvoiceMeUITestsLaunchTests.swift */; };
 		13CD5A292AF0BBAB00F446CD /* InvoicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD5A282AF0BBAB00F446CD /* InvoicesViewModel.swift */; };
@@ -45,7 +45,7 @@
 		13CD5A022AF0BB6500F446CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13CD5A052AF0BB6500F446CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		13CD5A0B2AF0BB6500F446CD /* InvoiceMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvoiceMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		13CD5A0F2AF0BB6500F446CD /* InvoiceMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceMeTests.swift; sourceTree = "<group>"; };
+		13CD5A0F2AF0BB6500F446CD /* InvoicesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicesViewModelTests.swift; sourceTree = "<group>"; };
 		13CD5A152AF0BB6500F446CD /* InvoiceMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvoiceMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CD5A192AF0BB6500F446CD /* InvoiceMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceMeUITests.swift; sourceTree = "<group>"; };
 		13CD5A1B2AF0BB6500F446CD /* InvoiceMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		13CD5A0E2AF0BB6500F446CD /* InvoiceMeTests */ = {
 			isa = PBXGroup;
 			children = (
-				13CD5A0F2AF0BB6500F446CD /* InvoiceMeTests.swift */,
+				13CD5A0F2AF0BB6500F446CD /* InvoicesViewModelTests.swift */,
 			);
 			path = InvoiceMeTests;
 			sourceTree = "<group>";
@@ -298,7 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13CD5A102AF0BB6500F446CD /* InvoiceMeTests.swift in Sources */,
+				13CD5A102AF0BB6500F446CD /* InvoicesViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
